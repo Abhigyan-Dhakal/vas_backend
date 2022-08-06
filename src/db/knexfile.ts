@@ -2,7 +2,7 @@ import type { Knex } from "knex";
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: __dirname + "../../.env",
+  path: __dirname + `/../../.env`,
 });
 
 // Update with your config settings.
@@ -24,5 +24,7 @@ const config: { [key: string]: Knex.Config } = {
     },
   },
 };
+
+console.log(process.env.DB_CLIENT);
 
 export default config;
