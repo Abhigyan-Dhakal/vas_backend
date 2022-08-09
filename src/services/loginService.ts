@@ -28,7 +28,7 @@ export const login = async (
   );
 
   return {
-    data: { accessToken },
+    data: { accessToken, userId: user.id, userIsAdmin: user.isAdmin },
     message: "User Logged In",
   };
 };

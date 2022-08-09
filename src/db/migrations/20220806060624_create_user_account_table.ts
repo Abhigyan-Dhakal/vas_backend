@@ -5,7 +5,7 @@ export async function up(knex: Knex): Promise<void> {
     table.increments("id");
     table.string("first_name").notNullable();
     table.string("last_name").notNullable();
-    table.string("dob").notNullable();
+    table.date("dob").notNullable();
     table.string("ethnicity").notNullable();
     table.string("gender").notNullable();
     table.string("email").notNullable().unique();
@@ -13,11 +13,7 @@ export async function up(knex: Knex): Promise<void> {
     table.string("street").notNullable();
     table.string("city").notNullable();
     table.string("state").notNullable();
-    table.string("insurance_id");
-    table.string("member_id");
-    table.string("insurance_provider");
-    table.string("document");
-    table.boolean("isAdmin").defaultTo(false);
+    table.boolean("isAdmin").defaultTo(true);
   });
 }
 

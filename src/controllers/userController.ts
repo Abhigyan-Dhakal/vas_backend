@@ -19,10 +19,6 @@ export const createUser = (req: Request, res: Response, next: NextFunction) => {
     street,
     city,
     state,
-    insurance_id,
-    member_id,
-    insurance_provider,
-    document,
   } = req.body;
 
   userService
@@ -37,10 +33,6 @@ export const createUser = (req: Request, res: Response, next: NextFunction) => {
       street,
       city,
       state,
-      insurance_id,
-      member_id,
-      insurance_provider,
-      document,
     })
     .then((data) => res.json(data))
     .catch((err) => {

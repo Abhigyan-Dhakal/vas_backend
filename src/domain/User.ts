@@ -10,10 +10,6 @@ interface User {
   street: string;
   city: string;
   state: string;
-  insurance_id: string;
-  member_id: string;
-  insurance_provider: string;
-  document: any;
   isAdmin: boolean;
 }
 
